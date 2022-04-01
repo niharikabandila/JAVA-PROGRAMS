@@ -1,0 +1,14 @@
+class Input//difference b/w string class and buffer string class
+{
+	public static void main(String args[])
+	{
+		String s1=new String ("Aditya ");//immutable
+		s1=s1.concat("Engineering");//it wont get updated but can referred
+		System.out.println(s1);
+		StringBuffer s2=new StringBuffer ("Aditya ");//mutable
+		s2.append("Engineering");//it can be updated
+		System.out.println(s2);
+		
+		
+	}
+}
