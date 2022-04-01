@@ -1,0 +1,26 @@
+import java.io.*;
+class Input //DISARIUM NUMBER
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n, i,d,sum=0,temp;
+		System.out.println("enter number");
+		n=Integer.parseInt(br.readLine());
+		temp=n;
+		d=(int)Math.log10(n)+1;
+		while(n!=0)
+		{
+			sum+=(int)Math.pow((n%10),d);
+			n/=10;	
+			d--;
+		}
+		if(sum==temp){
+			System.out.println("DISARIUM NUMBER");	
+				}
+		else{
+			System.out.println("NOT A DISARIUM NUMBER");
+		     }
+	}
+}
