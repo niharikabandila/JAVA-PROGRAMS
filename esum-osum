@@ -1,0 +1,29 @@
+import java.io.*;
+class Input //ABSOLUTE DIFFERENCE OF EVEN NUM SUM AND ODD NUM SUM OF A GIVEN NUM
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n;
+		System.out.println("enter number");
+		n=Integer.parseInt(br.readLine());
+		int esum=0;
+		int osum=0;
+		int r;
+		while(n!=0)
+		{
+			r=n%10;
+			if(r%2==0)
+			{
+				esum+=r;
+			}
+			else
+			{
+				osum+=r;
+			}
+			n/=10;
+		}
+		System.out.println(Math.abs(esum-osum));
+	}
+}
