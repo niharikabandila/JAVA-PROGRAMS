@@ -1,0 +1,22 @@
+import java.io.*;
+class Input //FIBONACCI SERIES
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n;
+		System.out.println("enter number");
+		n=Integer.parseInt(br.readLine());
+		int f=0,p;
+		int s=1;
+		System.out.print(f+" "+s+" ");
+		for(int i=3;i<=n;i++)
+		{
+			p=f+s;
+			f=s;
+			s=p;
+		           System.out.print(p+"  ");
+		}
+	}
+}
