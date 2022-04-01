@@ -1,1 +1,21 @@
-
+class Input
+{
+	int x=4,y=20;
+	public static void show()
+	{
+		System.out.println("Good Morning");
+	}
+	public void display()
+	{
+		System.out.println("Good Morning");
+	}
+	public static void main(String args[])
+	{
+		Input obj=new Input();
+		obj.display();
+		show();
+		System.out.println("Welcome");
+		System.out.println(obj.x);
+		System.out.println(obj.y);
+	}
+}
