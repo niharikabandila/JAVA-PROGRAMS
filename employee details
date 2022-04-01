@@ -1,0 +1,20 @@
+//employee details
+import  java.io.*;
+class Input
+{
+	public static void main(String args[])throws Exception
+	{
+		int empid;
+		String ename,address;
+		float salary;
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		System.out.println("Ente id,name,address,salary:");
+		empid=Integer.parseInt(br.readLine());
+		ename=br.readLine();
+		address=br.readLine();
+		salary = Float.parseFloat(br.readLine());
+		System.out.println("employee information");
+		System.out.println("id="+empid+"\n name="+ename+"\n adrr="+address+"\n salary="+salary);
+	}
+}
