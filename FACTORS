@@ -1,0 +1,24 @@
+import java.io.*;
+class Input //FACTORS
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n;
+		System.out.println("enter number");
+		n=Integer.parseInt(br.readLine());
+		int sum=0;
+		int pro=1;
+		for(int i=1;i<=n;i++)
+		{
+			if(n%i==0)
+			{
+				sum+=i;
+				pro*=i;
+			}
+		}
+		int dif=pro-sum;
+		System.out.println("difference of product of factors and sum of factors is" +dif);		
+	}
+}
