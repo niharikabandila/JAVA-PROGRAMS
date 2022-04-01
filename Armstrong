@@ -1,0 +1,29 @@
+import java.io.*;
+class Input //ARMSTRONG NUMBER
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n;
+		System.out.println("enter number");
+		n=Integer.parseInt(br.readLine());
+		int d,sum=0;
+		int temp=n;
+		d=(int)Math.log10(n)+1;
+		//System.out.println("digits="+d);
+		while(n!=0)
+		{
+			sum+=(int)Math.pow((n%10),d);
+			n/=10;
+		}
+		if(sum==temp)
+		{
+			System.out.println("ARMSTRONG NUMBER");
+		}
+		else
+		{
+			System.out.println("NOT AN ARMSTRONG NUMBER");
+		}		
+	}
+}
