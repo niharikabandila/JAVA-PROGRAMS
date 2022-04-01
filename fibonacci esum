@@ -1,0 +1,29 @@
+import java.io.*;
+class Input //FIBONACCI SERIES EVEN NUMBERS SUM
+{
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n;
+		System.out.println("enter number");
+		n=Integer.parseInt(br.readLine());
+		int f=0,p;
+		int s=1;
+		int sum=0;
+		p=f+s;
+		System.out.print(f+" "+s+" ");
+		while(p<=n)
+		{
+			if(p%2==0)
+			{
+				sum+=p;
+			}
+			f=s;
+			s=p;
+		           System.out.print(p+"  ");
+			p=f+s;
+		}
+		System.out.println("\nsum="+sum);
+	}
+}
