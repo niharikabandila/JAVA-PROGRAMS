@@ -1,0 +1,35 @@
+
+public class Swapping {
+	
+	public void swap(int x,int y) {
+		int z;
+		z=x;
+		x=y;
+		y=z;
+		System.out.println(x+" "+y);
+	}
+	public void swap(char a,char b) {
+		char r;
+		r=a;
+		a=b;
+		b=r;
+		System.out.println(a+" "+b);
+	}
+	public void swap(double d1,double d2) {
+		double d3;
+		d3=d1;
+		d1=d2;
+		d2=d3;
+		System.out.println(d1+" "+d2);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Swapping s=new Swapping();
+		s.swap(10,20);
+		s.swap('a','b');
+		s.swap(1.2,4.7);
+
+	}
+
+}
