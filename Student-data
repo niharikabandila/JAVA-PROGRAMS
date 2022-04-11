@@ -1,0 +1,88 @@
+//program to print the data of student 
+/*import java.io.;
+class ObjectOriented
+{
+  //member variable declaration
+  String rollnum,name,branch,clg_name;
+  int year;
+  float per_marks;
+  
+
+  BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+  //Reading of input
+  public void getData()throws Exception
+  {
+    System.out.println("Enter rollnum,name,branch,college name,year,percentage");
+    rollnum=br.readLine();
+    name=br.readLine();
+    branch=br.readLine();
+    clg_name=br.readLine();
+    year=Integer.parseInt(br.readLine());
+    per_marks=Float.parseFloat(br.readLine());
+  } 
+  //Displaying of Information
+  public void display()
+  {
+    System.out.println("Roll Number="+rollnum); 
+    System.out.println("Name="+name);
+    System.out.println("Branch="+branch);
+    System.out.println("College name="+clg_name);
+    System.out.println("Year="+year);
+    System.out.println("Percentage of marks="+per_marks);    
+  }
+  public static void main(String args[])throws Exception
+  { 
+    ObjectOriented s1=new ObjectOriented();
+    s1.getData();
+    s1.display();
+  }
+}*/
+
+//PROGRAM TO DISPLAY PERSONAL INFORMATION AND QUALIFICATIONS OF AN EMPLOYEE THROUGH METHODS
+/import java.io.;
+class ObjectOriented
+{
+ int empid;
+ String name,dept_name,organization,ug,pg;
+ float salary;
+
+ BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+ public void getPersonal()throws Exception
+ {
+ System.out.println("Enter empid,name,dept_name,salary,organization");
+ empid=Integer.parseInt(br.readLine());
+ name=br.readLine();
+ dept_name=br.readLine();
+ salary=Float.parseFloat(br.readLine());
+ organization=br.readLine();
+ }
+ public void getQualification()throws Exception
+ {
+  System.out.println("Enter ug,pg details"); 
+  ug=br.readLine();
+  pg=br.readLine();
+ }
+ public void displayPersonal()
+ { 
+  System.out.println("PERSONAL DETAILS:");
+  System.out.println("Empid="+empid);
+  System.out.println("Name="+name);
+  System.out.println("Dept Name="+dept_name);
+  System.out.println("Salary="+salary);
+  System.out.println("Organization="+organization);
+ }
+ public void displayQualification()
+ {
+  System.out.println("QUALIFICATION DETAILS:");
+  System.out.println("UG="+ug);
+  System.out.println("PG="+pg);
+ }
+ public static void main(String args[])throws Exception
+ {
+  ObjectOriented s1=new ObjectOriented();
+  s1.getPersonal();
+  s1.getQualification();
+  s1.displayPersonal();
+  s1.displayQualification();
+ }
+}*/
