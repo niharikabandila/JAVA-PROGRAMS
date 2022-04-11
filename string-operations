@@ -74,3 +74,77 @@ class Input
 		System.out.println(l+" "+u+" "+d+" "+s);
 	}
 }*/
+
+class Stringbuf {
+public static void main(String args[])
+{
+/*StringBuffer s1=new StringBuffer();
+System.out.println(s1.capacity());  //16
+System.out.println(s1.length());    //0
+s1.append("abcdefghijklmnopq");
+System.out.println(s1.capacity());
+System.out.println(s1.length()); */
+/*StringBuffer s2=new StringBuffer("Welcome ");
+System.out.println(s2.capacity());  //24
+System.out.println(s2.length());    //8  
+
+System.out.println(s2.charAt(4));    //o
+s2.setCharAt(4, 'a');
+System.out.println(s2);      //Welcame
+
+s2.deleteCharAt(4);
+System.out.println(s2);//Welcme
+
+s2.append(" Srinu");
+System.out.println(s2);  //Welcme  Srinu
+
+s2.insert(4,"a");
+System.out.println(s2);    //Welcame  Srinu
+
+s2.delete(8,16);
+System.out.println(s2);     //Welcame
+
+s2.append(true);
+System.out.println(s2);    //Welcame true
+
+s2.reverse();
+System.out.println(s2);    //  eurt emacleW */
+}
+}
+Important constructors of String class:
+
+1)String s=new String();    //Creates an empty String object
+2)String s=new String(String literal);
+3)String s=new String(StringBuffer sb);
+4)String s=new String(StringBuilder sb);
+5)String s=new String(char[] a);
+
+Important methods of String class
+
+charAt(index)
+equals()
+isEmpty()
+replace()
+indexOf(char)
+toLowerCase()
+trim()                    //removing white spaces before and after the strings.(starting and ending)
+concat()
+equalsIgnoreCase()  //see all lower and upper as same.
+length()
+substring()            
+LastIndexOf()          //last to first checking of index.
+toUpperCase()
+
+->Important methods of StringBuffer
+*length()
+*charAt()
+*append()
+*delete()
+*reverse()
+*ensureCapacity()
+*capacity()
+*setCharAt()
+*insert()
+*deleteCharAt()
+*setlength()
+*trimToSize()
