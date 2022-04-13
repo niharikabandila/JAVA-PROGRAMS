@@ -50,7 +50,7 @@ public class Employee {
 		}
 		for(int i=0;i<5;i++)
 		{
-			System.out.println("Employee "+"Information is: ");
+			System.out.println("Employee "+i+"Information is: ");
 			e[i].displayInfo();
 		}
 		Employee.showTotal();
