@@ -32,3 +32,41 @@ public class MethodOverriding {
 	}
 
 }
+
+
+//SUPER KEYWORD
+class Parent111
+{
+	public void show()
+	{
+		System.out.println("Parent show method");
+	}
+	public void display()
+	{
+		System.out.println("Parent display method");
+	}
+}
+class Child111 extends Parent111
+{
+	public void show()
+	{
+		super.show();
+		System.out.println("Child show method");
+	}
+	public void msg()
+	{
+		System.out.println("child msg method");
+	}
+}
+public class MethodOverriding {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Child111 c=new Child111();
+		c.display();
+		c.msg();
+		c.show();
+
+	}
+
+}
