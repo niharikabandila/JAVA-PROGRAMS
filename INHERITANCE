@@ -1,0 +1,191 @@
+//SINGLE LEVEL INHERITENCE
+
+
+class Parent1
+{
+	int x;
+	public void setx(int p)
+	{
+		x=p;
+	}
+	public int getx()
+	{
+		return x;
+	}
+}
+class Child1 extends Parent1
+{
+	int y;
+	public void sety(int q)
+	{
+		y=q;
+	}
+	public int gety()
+	{
+		return y;
+	}
+}
+public class Single {
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Parent-->Parent");
+		Parent1 p=new Parent1();
+		p.setx(100);
+		System.out.println(p.getx());
+		System.out.println("Child-->Child");
+		
+		//p.sety(20);==>compile time error   p.gety();
+		Child1 c=new Child1();
+		c.setx(4);
+		System.out.println(c.getx());
+		c.sety(7);
+		System.out.println(c.gety());
+		System.out.println("Parent-->child");
+		//STORING ONE CLASS OBJECT TO ANOTHER CLASS
+		Parent1 p1=new Child1();
+		p1.setx(47);
+		System.out.println(p1.getx());
+		//p1.sety(9);C.E
+		//COMPILE TIME ERROR
+		//Child1 c1=new Parent1();
+		
+
+	}
+
+}
+
+//MULTILEVEL INHERITANCE
+
+class Parent2
+{
+	int x;
+	public void setx(int p)
+	{
+		x=p;
+	}
+	public int getx()
+	{
+		return x;
+	}
+}
+class Child2 extends Parent2
+{
+	int y;
+	public void sety(int q)
+	{
+		y=q;
+	}
+	public int gety()
+	{
+		return y;
+	}
+}
+class Child extends Child2
+{
+	int z;
+	public void setz(int r)
+	{
+		z=r;
+	}
+	public int getz()
+	{
+		return z;
+	}
+}
+
+public class Multilevel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Child c=new Child();
+		c.setx(100);
+		c.sety(200);
+		c.setz(300);
+		System.out.println(c.getx());
+		System.out.println(c.gety());
+		System.out.println(c.getz());
+
+	}
+
+}
+
+
+//HIERARCHIAL INHERITENCE
+
+class A
+{
+	int x;
+	public void setx(int p)
+	{
+		x=p;
+	}
+	public int getx()
+	{
+		return x;
+	}
+}
+class B extends  A
+{
+	int y;
+	public void sety(int q)
+	{
+		y=q;
+	}
+	public int gety()
+	{
+		return y;
+	}
+}
+class C extends A
+{
+	int z;
+	public void setz(int r)
+	{
+		z=r;
+	}
+	public int getz()
+	{
+		return z;
+	}
+}
+class D extends A
+{
+	int n;
+	public void setn(int m)
+	{
+		n=m;
+	}
+	public int getn()
+	{
+		return n;
+	}
+}
+public class Hierarchial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		B b=new B();
+		b.setx(4);
+		b.sety(7);
+		System.out.println(b.getx());
+		System.out.println(b.gety());
+		System.out.println();
+		C c=new C();
+		c.setx(100);
+		c.setz(200);
+		System.out.println(c.getx());
+		System.out.println(c.getz());
+		System.out.println();
+		D d=new D();
+		d.setx(300);
+		d.setn(400);
+		System.out.println(d.getx());
+		System.out.println(d.getn());
+
+	}
+
+}
+
+
+//
