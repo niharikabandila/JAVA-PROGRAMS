@@ -34,6 +34,128 @@ public class MethodOverriding {
 }
 
 
+//USING OF THIS()
+class Parent21
+{
+	public Parent21()
+	{
+		//this("niha"); //first it calls parameterized constructor and then default constructor
+		System.out.println("Default constructor");
+	}
+	public Parent21(String name)
+	{
+		this();  //IT IS A CALLING METHOD OF SAME CLASS OF A CONSTRUCTOR
+		System.out.println("Good Moring "+name);
+	}
+}
+public class Super1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Parent21 p=new Parent21("Niha");
+		//Parent21 p=new Parent21();
+
+	}
+
+}
+//USING SUPER()
+class PPP
+{
+	public PPP()
+	{
+		
+		System.out.println("Default constructor-PPP");
+	}
+	public PPP(int x)
+	{
+		
+		System.out.println("Parameterized-PPP");
+	}
+}
+class CCC extends PPP
+{
+	public CCC()
+	{
+		//super();   AUTOMATICALLY JAVA COMPILER CREATES SUPER KEYWORD
+		System.out.println("Default constructor-CCC");
+	}
+	public CCC(int x)
+	{
+		super(4);
+		System.out.println("Parameterized-CCC");
+	}
+}
+
+
+public class Super2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CCC c=new CCC();//BOTH PARENT CLASS AND CHILD CLASS DEFAULT CONSTRUCTOR GETS INVOKED
+		CCC c1=new CCC(10);//PARENT CLASS DEFAULT CONSTRUCTOR AND CHILD CLASS PARAMETERIZED CONSTRUCTOR IF WE NOT WRITTEN SUPER KEYWORD
+		
+	}
+
+}
+
+
+//USING THIS() AND SUPER()
+class GP
+{
+	int x;
+	public GP(int x)
+	{
+		this.x=x;
+	}
+	public void showx()
+	{
+		System.out.println("x="+x);
+	}
+}
+class P3 extends GP
+{
+	int y;
+	public P3(int p,int q)
+	{
+		super(p);
+		y=q;
+	}
+	public void showy()
+	{
+		System.out.println("y="+y);
+	}
+}
+class C3 extends P3
+{
+	int z;
+	public C3(int p,int q,int r)
+	{
+		super(p,q);
+		z=r;
+	}
+	public void showz()
+	{
+		System.out.println("z="+z);
+	}
+}
+public class Super3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		P3 p=new P3(4,7);
+		p.showx();
+		p.showy();
+		
+		C3 c=new C3(4,7,47);
+		c.showx();
+		c.showy();
+		c.showz();
+
+	}
+
+}
+
+
 //SUPER KEYWORD
 class Parent111
 {
