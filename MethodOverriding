@@ -300,3 +300,43 @@ public class Super3 {
 
 }
 
+//DYNAMIC METHOD DISPATCHING
+class AM
+{
+	public void m1()
+	{
+		System.out.println("A method");
+	}
+}
+class BM extends AM
+{
+	public void m1()
+	{
+		System.out.println("B method");
+	}
+}
+class CM extends AM
+{
+	public void m1()
+	{
+		System.out.println("C method");
+	}
+}
+public class Dynamic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AM a;
+		a=new AM();
+		a.m1();
+		
+		a=new BM();
+		a.m1();
+		
+		a=new CM();
+		a.m1();
+
+	}
+
+}//RUN TIME POLYMORPHISM
+
