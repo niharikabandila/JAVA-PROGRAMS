@@ -242,3 +242,61 @@ public class MethodOverriding2 {
 	}
 
 }
+
+
+//FINAL KEYWORD
+class GP
+{
+	int x;
+	public GP(int x)
+	{
+		this.x=x;
+	}
+	public void showx()
+	{
+		System.out.println("x="+x);
+	}
+}
+class P3 extends GP
+{
+	int y;
+	public P3(int p,int q)
+	{
+		super(p);
+		y=q;
+	}
+	public void showy()
+	{
+		System.out.println("y="+y);
+	}
+}
+class C3 extends P3
+{
+	int z;
+	public C3(int p,int q,int r)
+	{
+		super(p,q);
+		z=r;
+	}
+	public void showz()
+	{
+		System.out.println("z="+z);
+	}
+}
+public class Super3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		P3 p=new P3(4,7);
+		p.showx();
+		p.showy();
+		
+		C3 c=new C3(4,7,47);
+		c.showx();
+		c.showy();
+		c.showz();
+
+	}
+
+}
+
