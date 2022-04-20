@@ -46,6 +46,8 @@ class Parent111
 		System.out.println("Parent display method");
 	}
 }
+
+
 class Child111 extends Parent111
 {
 	public void show()
@@ -66,6 +68,54 @@ public class MethodOverriding {
 		c.display();
 		c.msg();
 		c.show();
+
+	}
+
+}
+//ANOTHER EXAMPLE
+import java.util.*;
+class Number
+{
+	int x;
+	Scanner sc=new Scanner(System.in);
+	public void getno()
+	{
+		System.out.println("enter a number:");
+		x=sc.nextInt();
+	}
+	void show()
+	{
+		System.out.println("Decimal:"+x);
+	}
+}
+class Hexa extends Number
+{
+	void show()
+	{
+		super.show();
+		System.out.println("Hexa:"+Integer.toHexString(x));
+	
+	}
+}
+class Octal extends Number
+{
+	void show()
+	{
+		super.show();
+		System.out.println("Hexa:"+Integer.toOctalString(x));
+	
+	}
+}
+public class MethodOverriding2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Hexa h=new Hexa();
+		h.getno();
+		h.show();
+		Octal o=new Octal();
+		o.getno();
+		o.show();
 
 	}
 
