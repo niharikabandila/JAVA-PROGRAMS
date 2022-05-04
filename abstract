@@ -1,0 +1,132 @@
+import java.util.Scanner;
+abstract class Shape {
+	float s1,s2,area;
+	final float pi=3.142f;
+	Scanner sc=new Scanner(System.in);
+	public abstract void getInput();
+	public abstract float cal_Area();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Shape s=new Rect();
+		s.getInput();
+		System.out.println(s.cal_Area());
+		System.out.println("===========");
+		s=new Circle();
+		s.getInput();
+		System.out.println(s.cal_Area());
+		System.out.println("===========");
+		s=new Square();
+		s.getInput();
+		System.out.println(s.cal_Area());
+		System.out.println("===========");
+	}
+
+}
+class Rect extends Shape
+{
+	public void getInput()
+	{
+		System.out.println("enter number of sides:");
+		s1=sc.nextFloat();
+		s2=sc.nextFloat();
+	}
+	public float cal_Area()
+	{
+		return s1*s2;
+	}
+}
+class Circle extends Shape
+{
+	public void getInput()
+	{
+		System.out.println("enter radius of a circle:");
+		s1=sc.nextFloat();
+	}
+	public float cal_Area()
+	{
+		return pi*s1*s1;
+	}
+}
+class Square extends Shape
+{
+	public void getInput()
+	{
+		System.out.println("enter side:");
+		s1=sc.nextFloat();
+	}
+	public float cal_Area()
+	{
+		return s1*s1;
+	}
+}
+
+//vehicle
+abstract class Vehicle {
+	public abstract int get_no_wheels();
+	public abstract int seating_capacity();
+
+}
+class Bike extends Vehicle
+{
+	public int get_no_wheels()
+	{
+		return 2;
+	}
+	public int seating_capacity()
+	{
+		return 2;
+	}
+}
+class Auto extends Vehicle
+{
+	public int get_no_wheels()
+	{
+		return 3;
+	}
+	public int seating_capacity()
+	{
+		return 4;
+	}
+}
+class Car extends Vehicle
+{
+	public int get_no_wheels()
+	{
+		return 4;
+	}
+	public int seating_capacity()
+	{
+		return 5;
+	}
+}
+class Mainclass
+{
+	public static void main(String args[]) {
+		Vehicle v;
+		int w,c;
+		v=new Bike();
+		System.out.println("===========");
+		System.out.println("Bike:");
+		w=v.get_no_wheels();
+		c=v.seating_capacity();
+		System.out.println("No of Wheels:"+w);
+		System.out.println("Seating Capacity"+c);
+		System.out.println("===========");
+		v=new Auto();
+		System.out.println("===========");
+		System.out.println("Auto");
+		w=v.get_no_wheels();
+		c=v.seating_capacity();
+		System.out.println("No of Wheels:"+w);
+		System.out.println("Seating Capacity"+c);
+		System.out.println("===========");
+		v=new Car();
+		System.out.println("===========");
+		System.out.println("Car");
+		w=v.get_no_wheels();
+		c=v.seating_capacity();
+		System.out.println("No of Wheels:"+w);
+		System.out.println("Seating Capacity"+c);
+		System.out.println("===========");
+	}
+}
