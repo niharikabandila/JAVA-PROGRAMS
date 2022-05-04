@@ -43,3 +43,70 @@ class Interface implements I3
 	}
 }
 
+//LAB PROGRAM
+
+import java.util.Scanner;
+interface Internal_Marks
+{
+	void get_InternalMarks();
+	void show_InternalMarks();
+	
+}
+interface External_Marks
+{
+	void get_ExternalMarks();
+	void show_ExternalMarks();
+}
+interface Total_Marks extends Internal_Marks,External_Marks
+{
+	void show_Total();
+}
+class Subject_Marks implements Total_Marks
+	int m1,p1,c1,m2,p2,c2,t1,t2,t3;
+	Scanner sc=new Scanner(System.in);
+	public void get_InternalMarks()
+	{
+		System.out.println("enter 3 subjects internal marks\n");
+		m1=sc.nextInt();
+		p1=sc.nextInt();
+		c1=sc.nextInt();
+	}
+	public void get_ExternalMarks()
+	{
+		System.out.println("enter 3 subjects internal marks\n");
+		m2=sc.nextInt();
+		p2=sc.nextInt();
+		c2=sc.nextInt();
+	}
+	public void show_InternalMarks()
+	{
+		System.out.println("internal marks:");
+		System.out.println("marks="+m1+"physics= "+p1+"chemistry= "+c1);
+	}
+	public void show_ExternalMarks()
+	{
+		System.out.println("external marks:");
+		System.out.println("marks="+m2+"physics= "+p2+"chemistry= "+c2);
+	}
+	public void show_Total()
+	{
+		t1=m1+m2;
+		t2=p1+p2;
+		t3=c1+c2;
+		System.out.println("total marks= "+(t1+t2+t3));
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Subject_Marks m=new Subject_Marks();
+		m.get_InternalMarks();
+		m.get_ExternalMarks();
+		m.show_InternalMarks();
+		m.show_ExternalMarks();
+		m.show_Total();
+		
+
+	}
+
+}
+
