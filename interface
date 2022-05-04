@@ -1,0 +1,45 @@
+//1.interface is fully abstract class
+//2.in interface all the methods by default those are public abstract
+//void m1();
+//public void m1();
+//public abstract void m1();
+//3.in interface we can allow to declare constants only
+//4.we are allowed to create a reference variable to an interface but it is not possible to create instance
+//5.the class which implements an interface,it must be give the definitions for all the method which are declared inside the interface otherwise that class will be treated as abstract class
+//6.interface are used to hide the some of the services of the implemented class.
+interface I1
+{
+	void m1();
+}
+interface I2 
+{
+	void m2();
+}
+interface I3 extends I1,I2
+{
+	void m3();
+}
+class Interface implements I3
+{
+	public void m1()
+	{
+		System.out.println("M1 method");
+	}
+	public void m2()
+	{
+		System.out.println("M2 method");
+	}
+	public void m3()
+	{
+		System.out.println("M3 method");
+	}
+	public static void main(String args[])
+	{
+		I3 i;
+		i=new Interface();
+		i.m1();
+		i.m2();
+		i.m3();
+	}
+}
+
