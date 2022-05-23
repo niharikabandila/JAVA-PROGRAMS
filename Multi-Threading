@@ -138,3 +138,63 @@ public class ThreadSleep {
 	}
 
 }
+//LAB PROGRAM ON THREADING
+class Thread7 extends Thread
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Good Morning");
+			try{
+				Thread.sleep(1000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+class Thread8 extends Thread
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Hello");
+			try{
+				Thread.sleep(2000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+class Thread9 extends Thread
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Welcome");
+			try{
+				Thread.sleep(3000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+public class ThreadLab {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread7 t1=new Thread7();
+		Thread8 t2=new Thread8();
+		Thread9 t3=new Thread9();
+		t1.start();
+		t2.start();
+		t3.start();
+
+	}
+
+}
