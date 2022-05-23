@@ -294,3 +294,31 @@ public class ThreadYeild {
 
 }
 
+//JOIN METHOD
+class Thread33 extends Thread
+{
+	public void run()
+	{
+		//Thread.yield();
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("Dhoni");
+		}
+	}
+}
+public class ThreadJoin {
+
+	public static void main(String[] args)throws InterruptedException {
+		// TODO Auto-generated method stub
+		Thread33 t33=new Thread33();
+		t33.start();
+		t33.setPriority(9);
+		t33.join();
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("YuvaRaj");
+		}
+
+	}
+
+}
