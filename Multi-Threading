@@ -34,3 +34,32 @@ public class Threadding {
 	}
 
 }
+
+//THREAD METHODS
+//SET AND GET METHODS
+class Thread3 extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i<5;i++)
+			System.out.println(Thread.currentThread().getName()+":"+i);
+	}
+}
+public class ThreadSetMethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread3 t3=new Thread3();
+		t3.start();
+		t3.setName("Dhoni");
+		Thread.currentThread().setName("YuvaRaj");
+		for(int i=0;i<5;i++)
+		System.out.println(Thread.currentThread().getName()+":"+i);
+		
+
+	}
+
+}
+
+//HOW TO SET THE PRIORITY AND HOW TO EXECUTE THE THREAD FIRST
+
