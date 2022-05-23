@@ -198,3 +198,99 @@ public class ThreadLab {
 	}
 
 }
+
+//USING RUNNABLE
+class Thread11 implements Runnable
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Good Morning");
+			try{
+				Thread.sleep(1000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+class Thread12 implements Runnable
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Hello");
+			try{
+				Thread.sleep(2000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+class Thread13 implements Runnable
+{
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Welcome");
+			try{
+				Thread.sleep(3000);}
+			catch(InterruptedException ie) {
+				System.out.println(ie);
+			}
+		}
+	}
+}
+public class ThreadRun {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread t1=new Thread(new Thread11());
+		Thread t2=new Thread(new Thread12());
+		Thread t3=new Thread(new Thread13());
+		t1.start();
+		t2.start();
+		t3.start();
+
+	}
+
+}
+//YEILD METHOD
+//YIELD IS USED TO PAUSE THE CURRENTLY ECECUTING THREAD AND GIVES CHANCE TO OTHER THREADS WHICH ARE IN WAITING
+1.IF OTHER THREADS HAVE HIGHER PRIORITY THAT THIS,IT WILL GIVES A CHANCE TO RUN IT.
+2.IF OTHER THREADS ALL ARE HAVING THE PRIORITY LOWER THAN CURRENT EXECUTING THREAD,IT CONTINUE ITS EXECUTION.
+3.IF OTHER THREADS ALL ARE HAVING EQUAL PRIORITY WITH CURRENTLY EXECUTING THREAD THEN WE CAN'T EXPECT THE OUTPUT.
+
+class Thread22 extends Thread
+{
+	public void run()
+	{
+		//Thread.yield();
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("Dhoni");
+		}
+	}
+}
+public class ThreadYeild {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Thread22 t22=new Thread22();
+		t22.start();
+		t22.setPriority(9);
+		
+		Thread.yield();
+		for(int i=0;i<10;i++)
+		{
+			System.out.println("YuvaRaj");
+		}
+
+	}
+
+}
+
