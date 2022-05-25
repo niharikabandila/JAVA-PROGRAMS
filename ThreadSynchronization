@@ -1,0 +1,43 @@
+
+class TicketCounter
+{
+	private int availableseats=3;
+	public synchronized void bookTicket(String name,int num_seats)
+	{
+		if(availableseats>=num_seats && num_seats>0)
+		{
+			System.out.println("Hi,"+name+":"+num_seats+"Seats booked");
+			availableseats-=num_seats;
+		}
+		else
+			System.out.println("Hi,"+name+": Seats not Available");
+	}
+}
+class TicketBookingThread extends Thread
+{
+	TicketCounter tc;
+	String pname;
+	int num_seats;
+	public TicketBookingThread(TicketCounter tc,String pname,int num_seats)
+	{
+		this.tc=tc;
+		this.pname=pname;
+		this.num_seats=num_seats;
+	}
+	public void run()
+	{
+		tc.bookTicket(pname, num_seats);
+	}
+}
+public class ThreadSync {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TicketCounter tc=new TicketCounter();
+		TicketBookingThread t1=new TicketBookingThread(tc,"NIHA",2);
+		TicketBookingThread t2=new TicketBookingThread(tc,"MAHA",2);	
+		t1.start();
+		t2.start();
+	}
+
+}
